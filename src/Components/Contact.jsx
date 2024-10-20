@@ -1,9 +1,11 @@
 // import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
+import Footer from "./Footer";
+import Header from "./Header";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100"> <Header/>
       <div className="relative bg-blue-600 text-white py-16 text-center">
         <h1 className="text-4xl font-bold">Contact Us</h1>
         <p className="mt-4">Home &gt; Contact Us</p>
@@ -86,6 +88,7 @@ const Contact = () => {
           title="Google Map"
         ></iframe>
       </section>
+      <Footer/>
     </div>
   );
 };

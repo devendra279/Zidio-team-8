@@ -1,8 +1,16 @@
-import { FaCloud, FaShieldAlt, FaMobileAlt, FaLaptopCode, FaChartLine } from 'react-icons/fa'; // Icons for services
+import {
+  FaCloud,
+  FaShieldAlt,
+  FaMobileAlt,
+  FaLaptopCode,
+} from "react-icons/fa"; // Icons for services
+import Footer from "./Footer";
+import Header from "./Header";
 
 const Services = () => {
   return (
     <div className="bg-white">
+         <Header/>
       {/* Background image with overlay */}
       <div className="relative">
         <img
@@ -14,7 +22,6 @@ const Services = () => {
           <h1 className="text-4xl text-white font-bold">Our Services</h1>
         </div>
       </div>
-
       {/* Service Cards */}
       <div className="container mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Service 1 */}
@@ -22,7 +29,8 @@ const Services = () => {
           <FaCloud className="text-4xl text-blue-500 mb-4" />
           <h3 className="text-2xl font-bold mb-2">Cloud Services</h3>
           <p className="text-gray-700 mb-4">
-            Deliver scalable cloud solutions to enhance your business's flexibility and efficiency.
+            Deliver scalable cloud solutions to enhance your business's
+            flexibility and efficiency.
           </p>
           <button className="text-blue-500 font-bold">Learn More →</button>
         </div>
@@ -42,7 +50,8 @@ const Services = () => {
           <FaMobileAlt className="text-4xl text-blue-500 mb-4" />
           <h3 className="text-2xl font-bold mb-2">Digital Marketing</h3>
           <p className="text-gray-700 mb-4">
-            Boost your online presence with tailored digital marketing strategies.
+            Boost your online presence with tailored digital marketing
+            strategies.
           </p>
           <button className="text-blue-500 font-bold">Learn More →</button>
         </div>
@@ -52,18 +61,20 @@ const Services = () => {
           <FaLaptopCode className="text-4xl text-blue-500 mb-4" />
           <h3 className="text-2xl font-bold mb-2">Web Development</h3>
           <p className="text-gray-700 mb-4">
-            Design and build responsive, high-performance websites using the latest technologies.
+            Design and build responsive, high-performance websites using the
+            latest technologies.
           </p>
           <button className="text-blue-500 font-bold">Learn More →</button>
         </div>
 
         {/* Add more services similarly */}
       </div>
-
       {/* Footer CTA */}
       <div className="bg-blue-500 py-8 mt-12">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl text-white font-bold mb-4">Stay Connected with Zidio</h2>
+          <h2 className="text-3xl text-white font-bold mb-4">
+            Stay Connected with Zidio
+          </h2>
           <input
             type="email"
             placeholder="Enter your email"
@@ -73,7 +84,8 @@ const Services = () => {
             Subscribe
           </button>
         </div>
-      </div>
+      </div>{" "}
+      <Footer />
     </div>
   );
 };

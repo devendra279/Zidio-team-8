@@ -1,9 +1,21 @@
-// import React from 'react';
+import { useState, useEffect } from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaClock, FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 const Top = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    setIsScrolled(offset > 50); // Adjust this threshold if needed
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="bg-blue-600 text-white py-2">
+    <div className={`transition-all duration-300 ${isScrolled ? 'bg-blue-600' : 'bg-transparent'} text-white py-2 fixed w-full z-50`}>
       <div className="container mx-auto flex justify-between items-center">
         {/* Left Side: Location and Email */}
         <div className="flex items-center space-x-4">
