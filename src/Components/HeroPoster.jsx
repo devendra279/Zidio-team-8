@@ -1,6 +1,6 @@
 import rocket from '../assets/rocket.png'
 import model from '../assets/model.png'
-const HeroPoster = () => {
+const Hero = () => {
   return (
     <div className="bg-[url('./assets/heroBg.jpg')] bg-cover h-[50%]" >
         <div className='mx-[8%] flex justify-between '>
@@ -32,4 +32,4 @@ const HeroPoster = () => {
   )
 }
 
-export default HeroPoster
+export default Hero

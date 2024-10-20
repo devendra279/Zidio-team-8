@@ -1,17 +1,17 @@
-import { useState } from 'react'; // Import useState hook
+import { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link component from react-router-dom
 import zidioLogo from '../assets/zidio-logo.png';
-import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa'; // Import social media icons
+import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa'; 
 import { GiHamburgerMenu } from 'react-icons/gi'; 
+
 const Header = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State for sidebar
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen((prev) => !prev); // Toggle the sidebar state
+    setIsSidebarOpen((prev) => !prev);
   };
 
   const handleMenuClick = () => {
-    // Logic for handling menu item clicks if needed
-    // For now, it just logs to the console
     console.log('Menu item clicked');
   };
 
@@ -20,7 +20,7 @@ const Header = () => {
       <div className='mx-[10%] flex justify-between items-center h-28'>
         {/* Hamburger Menu for Mobile */}
         <div className='lg:hidden flex items-center cursor-pointer' onClick={toggleSidebar}>
-          <GiHamburgerMenu className='text-btColor' size={30} /> {/* Correct icon */}
+          <GiHamburgerMenu className='text-btColor' size={30} />
         </div>
 
         <div>
@@ -30,16 +30,16 @@ const Header = () => {
         <div className='flex items-center hidden lg:flex'>
           <ul className='list-none flex space-x-4'>
             <li className='hover:text-btColor cursor-pointer'>
-              <a href="/" className="text-black hover:text-btColor">Home</a>
+              <Link to="/" className="text-black hover:text-btColor">Home</Link> {/* Use Link for client-side navigation */}
             </li>
             <li className='hover:text-btColor cursor-pointer'>
-              <a href="/About" className="text-black hover:text-btColor">About</a>
+              <Link to="/Components/About" className="text-black hover:text-btColor">About</Link> {/* Use Link for client-side navigation */}
             </li>
             <li className='hover:text-btColor cursor-pointer'>
-              <a href="/Services" className="text-black hover:text-btColor">Services</a>
+              <Link to="/services" className="text-black hover:text-btColor">Services</Link> {/* Use Link for client-side navigation */}
             </li>
             <li className='hover:text-btColor cursor-pointer'>
-              <a href="/Contact" className="text-black hover:text-btColor">Contact</a>
+              <Link to="/Components/Contact" className="text-black hover:text-btColor">Contact</Link> {/* Use Link for client-side navigation */}
             </li>
           </ul>
 
@@ -62,7 +62,7 @@ const Header = () => {
       {isSidebarOpen && (
         <div 
           className='fixed inset-0 z-10 bg-black bg-opacity-50' 
-          onClick={toggleSidebar} // Clicking on the overlay closes the sidebar
+          onClick={toggleSidebar}
         />
       )}
 
@@ -77,46 +77,34 @@ const Header = () => {
           <button onClick={toggleSidebar} className='text-btColor'>✖</button>
         </div>
         <ul className='list-none'>
-          <li className='p-4 hover:bg-gray-200 cursor-pointer' onClick={handleMenuClick}>Home</li>
-          <li className='p-4 hover:bg-gray-200 cursor-pointer' onClick={handleMenuClick}>About</li>
-          <li className='p-4 hover:bg-gray-200 cursor-pointer' onClick={handleMenuClick}>Services</li>
-          <li className='p-4 hover:bg-gray-200 cursor-pointer' onClick={handleMenuClick}>Contact</li>
+          <li className='p-4 hover:bg-gray-200 cursor-pointer' onClick={toggleSidebar}>
+            <Link to="/">Home</Link> {/* Use Link in sidebar */}
+          </li>
+          <li className='p-4 hover:bg-gray-200 cursor-pointer' onClick={toggleSidebar}>
+            <Link to="/about">About</Link> {/* Use Link in sidebar */}
+          </li>
+          <li className='p-4 hover:bg-gray-200 cursor-pointer' onClick={toggleSidebar}>
+            <Link to="/services">Services</Link> {/* Use Link in sidebar */}
+          </li>
+          <li className='p-4 hover:bg-gray-200 cursor-pointer' onClick={toggleSidebar}>
+            <Link to="/contact">Contact</Link> {/* Use Link in sidebar */}
+          </li>
         </ul>
 
         {/* Sidebar Footer */}
         <div className='absolute bottom-0 left-0 right-0 p-4 bg-gray-100'>
           <img src={zidioLogo} alt="Zidio Logo" className='h-10 mb-2 mx-auto' />
           <div className='flex justify-center space-x-4'>
-            <a 
-              href="https://www.youtube.com/channel/UCvxJRddqZowVyN6AXjylnMg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Zidio YouTube Channel" // For accessibility
-            >
+            <a href="https://www.youtube.com/channel/UCvxJRddqZowVyN6AXjylnMg" target="_blank" rel="noopener noreferrer">
               <FaYoutube className='text-btColor hover:text-blue-600 transition-colors' size={24} />
             </a>
-            <a 
-              href="https://www.facebook.com/profile.php?id=61556709391417" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Zidio Facebook Profile" // For accessibility
-            >
+            <a href="https://www.facebook.com/profile.php?id=61556709391417" target="_blank" rel="noopener noreferrer">
               <FaFacebook className='text-btColor hover:text-blue-600 transition-colors' size={24} />
             </a>
-            <a 
-              href="https://x.com/zidioDev" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Zidio Twitter Profile" // For accessibility
-            >
+            <a href="https://x.com/zidioDev" target="_blank" rel="noopener noreferrer">
               <FaTwitter className='text-btColor hover:text-blue-600 transition-colors' size={24} />
             </a>
-            <a 
-              href="https://www.linkedin.com/company/zidio-development/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Zidio LinkedIn Page" // For accessibility
-            >
+            <a href="https://www.linkedin.com/company/zidio-development/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className='text-btColor hover:text-blue-600 transition-colors' size={24} />
             </a>
           </div>
