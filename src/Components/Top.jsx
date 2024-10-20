@@ -1,7 +1,7 @@
 // import React from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaClock, FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
-const Announcement = () => {
+const Top = () => {
   return (
     <div className="bg-blue-600 text-white py-2">
       <div className="container mx-auto flex justify-between items-center">
@@ -49,4 +49,4 @@ const Announcement = () => {
   );
 };
 
-export default Announcement;
+export default Top;

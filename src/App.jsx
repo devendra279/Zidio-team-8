@@ -1,7 +1,7 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
-import AnnouncementBar from './Components/AnnouncementBar'
+import Top from './Components/Top'
 import Header from './Components/Header'
 import Hero from './Components/Hero'
 import Footer from './Components/Footer'
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
     <Router>
-    <AnnouncementBar />
+    <Top />
     <Header />
     <Hero />
     <Footer/>
