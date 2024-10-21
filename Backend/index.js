@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/users",{useNewUrlParser: true,
+mongoose.connect("mongodb+srv://devendrajangid202:e6Eie2Ne0857Qos6@cluster0.m79tf.mongodb.net/",{useNewUrlParser: true,
     useUnifiedTopology: true}).then(()=>{
       console.log("db connected succesfully")
 }).catch(()=>{
@@ -42,14 +42,14 @@ app.post("/register" , async (req, res )=>{
          const {  firstname, lastname , email , password ,phone } = req.body;
          const alreadyuser =  await User.findOne({ email });
          if (alreadyuser){
-          return res.status(400).json({message:"User is already exist "})
+          return res.status(400).json({message:"User already exist "})
          }else{
             const salt = await bcrypt.genSalt(10);
             const hash = await bcrypt.hash(password,salt);
             const newuser =  new User ({firstname,lastname,email,password:hash,phone});
             const data = await newuser.save();
             console.log(data)
-      return  res.status(201).json({message:"user register succesfully " , user_id:data._id})
+      return  res.status(201).json({message:"user registered succesfully " , user_id:data._id})
       }
     }catch(error){
           console.error("Register error",error)
