@@ -2,6 +2,7 @@ import rocket from '../assets/rocket.png';
 import model from '../assets/model.png';
 import Footer from "./Footer";
 import Header from "./Header";
+import { Link } from 'react-router-dom'; 
 
 const Hero = () => {
   return (
@@ -21,6 +22,7 @@ const Hero = () => {
           </p>
           <div className="flex space-x-4">
             <button className="cursor-pointer text-white px-6 py-3 rounded-lg outline outline-2 outline-btColor bg-btColor hover:bg-white hover:text-black transition-all">
+              
               Let's Talk &rarr;
             </button>
             <button className="cursor-pointer text-white px-6 py-3 rounded-lg outline outline-2 outline-btColor bg-btColor hover:bg-white hover:text-black transition-all">

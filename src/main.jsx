@@ -2,5 +2,7 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-
-createRoot(document.getElementById('root')).render( <App /> );
+import AuthcontextProvider from './Components/AuthContext';
+createRoot(document.getElementById('root')).render(<AuthcontextProvider>
+    <App></App>
+   </AuthcontextProvider> );
