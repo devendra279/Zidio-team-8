@@ -15,7 +15,7 @@ function Home(){
        }
        const getprofile = async () =>{
           try {
-          await axios.get("http://localhost:2000/profile").then((res)=>{
+          await axios.get("https://zidio-backend-dgyt8e87i-devendra279s-projects.vercel.app/profile").then((res)=>{
           console.log(res);
           setusername(res.data.message);})
           }catch(err){
