@@ -7,7 +7,7 @@ import Hero from './Components/Hero'
 // import Footer from './Components/Footer'
 import Services from './Components/Services'
 import Contact from './Components/Contact'
-import About from './Components/About'
+// import About from './Components/About'
 
 
 function App() {
@@ -18,10 +18,10 @@ function App() {
     {/* <Top /> */}
     {/* <Header /> */}
     <Hero />
-    <About/>
+    {/* <About/> */}
       <Routes>
         {/* <Route path="/" element={<Hero/>} /> */}
-        <Route path="//Components/About" element={<About />} />
+        {/* <Route path="//Components/About" element={<About />} /> */}
         <Route path="/services" element={<Services />} />
         <Route path="/Components/Contact" element={<Contact />} />
       </Routes>
