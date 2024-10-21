@@ -23,7 +23,7 @@ function Login() {
   const submit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:2000/login", {
+      const response = await axios.post("https://zidio-backend-dgyt8e87i-devendra279s-projects.vercel.app/login", {
         email: email,
         password: password,
       });
