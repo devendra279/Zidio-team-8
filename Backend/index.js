@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-mongoose.connect("mongodb+srv://devendrajangid202:e6Eie2Ne0857Qos6@cluster0.m79tf.mongodb.net/",{useNewUrlParser: true,
+mongoose.connect("mongodb+srv://devendrajangid202:e6Eie2Ne0857Qos6@cluster0.m79tf.mongodb.net/test",{useNewUrlParser: true,
     useUnifiedTopology: true}).then(()=>{
       console.log("db connected succesfully")
 }).catch(()=>{
