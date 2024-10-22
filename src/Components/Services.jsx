@@ -4,7 +4,7 @@ import {
   FaMobileAlt,
   FaLaptopCode,
 } from "react-icons/fa"; // Icons for services
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import Header from "./Header";
 
 const Services = () => {
@@ -85,7 +85,7 @@ const Services = () => {
           </button>
         </div>
       </div>{" "}
-      <Footer />
+
     </div>
   );
 };

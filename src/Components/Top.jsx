@@ -15,7 +15,7 @@ const Top = () => {
   }, []);
 
   return (
-    <div className={`transition-all duration-300 ${isScrolled ? 'bg-[#0D1B2A]' : 'bg-transparent'} text-white py-2 fixed w-full z-50`}>
+    <div className={`transition-all duration-300 ${isScrolled ? 'opacity-100' : 'opacity-100 pointer-events-none'} bg-gradient-to-r from-purple-600 via-blue-500 to-teal-400 text-white py-2 fixed w-full z-50`}>
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8 lg:px-20">
         
         {/* Left Side: Location and Email */}

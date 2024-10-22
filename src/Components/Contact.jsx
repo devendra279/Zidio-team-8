@@ -1,6 +1,6 @@
 // import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
-import Footer from "./Footer";
+
 import Header from "./Header";
 
 const Contact = () => {
@@ -88,7 +88,7 @@ const Contact = () => {
           title="Google Map"
         ></iframe>
       </section>
-      <Footer/>
+    
     </div>
   );
 };
