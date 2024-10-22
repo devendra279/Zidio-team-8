@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <> 
       <Top/>
-      <div className={`fixed top-10 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0D1B2A]' : 'bg-transparent'}`}>
+      <div className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0D1B2A]' : 'bg-[transparent]'}`}>
         <div className='mx-[10%] flex justify-between items-center h-20'>
           {/* Hamburger Menu for Mobile */}
           <div className='lg:hidden flex items-center cursor-pointer' onClick={toggleSidebar}>
@@ -52,16 +52,16 @@ const Header = () => {
           <div className='flex items-center hidden lg:flex'>
             <ul className='list-none flex space-x-4'>
               <li className='hover:text-btColor cursor-pointer'>
-                <Link to="/" className="text-black hover:text-btColor">Home</Link>
+                <Link to="/" className="text-white hover:text-btColor">Home</Link>
               </li>
               <li className='hover:text-btColor cursor-pointer'>
-                <Link to="/Components/About" className="text-black hover:text-btColor">About</Link>
+                <Link to="/Components/About" className="text-white hover:text-btColor">About</Link>
               </li>
               <li className='hover:text-btColor cursor-pointer'>
-                <Link to="/services" className="text-black hover:text-btColor">Services</Link>
+                <Link to="/services" className="text-white hover:text-btColor">Services</Link>
               </li>
               <li className='hover:text-btColor cursor-pointer'>
-                <Link to="/Components/Contact" className="text-black hover:text-btColor">Contact</Link>
+                <Link to="/Components/Contact" className="text-white hover:text-btColor">Contact</Link>
               </li>
             </ul>
 
@@ -90,7 +90,7 @@ const Header = () => {
         {/* Sidebar */}
         <div className={`fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} z-20`}>
           <div className='p-4 flex justify-between items-center'>
-            <h2 className='text-lg font-bold'>Menu</h2>
+            <h2 className='text-lg font-bold'>Menu </h2>
             <button onClick={toggleSidebar} className='text-btColor'>✖</button>
           </div>
           <ul className='list-none'>
@@ -107,7 +107,15 @@ const Header = () => {
               <Link to="/Components/Contact">Contact</Link>
             </li>
           </ul>
-
+{/* Login & Register Buttons for Mobile */}
+<div className='flex flex-col items-center mt-4'>
+              <button onClick={openLoginModal} className='px-4 py-2 text-btColor border-btColor border rounded-md hover:bg-btColor hover:text-white transition-all mb-2'>
+                Login
+              </button>
+              <button onClick={openRegisterModal} className='px-4 py-2 text-white bg-btColor border-btColor border rounded-md hover:bg-white hover:text-btColor transition-all'>
+                Register
+              </button>
+            </div>
           {/* Sidebar Footer */}
           <div className='absolute bottom-0 left-0 right-0 p-4 bg-gray-100'>
             <img src={zidioLogo} alt="Zidio Logo" className='h-10 mb-2 mx-auto' />
@@ -126,15 +134,7 @@ const Header = () => {
               </a>
             </div>
 
-            {/* Login & Register Buttons for Mobile */}
-            <div className='flex flex-col items-center mt-4'>
-              <button onClick={openLoginModal} className='px-4 py-2 text-btColor border-btColor border rounded-md hover:bg-btColor hover:text-white transition-all mb-2'>
-                Login
-              </button>
-              <button onClick={openRegisterModal} className='px-4 py-2 text-white bg-btColor border-btColor border rounded-md hover:bg-white hover:text-btColor transition-all'>
-                Register
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>
