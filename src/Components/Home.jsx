@@ -15,7 +15,11 @@ function Home(){
        }
        const getprofile = async () =>{
           try {
+<<<<<<< HEAD
           await axios.get("https://zidio-backend-dgyt8e87i-devendra279s-projects.vercel.app/profile").then((res)=>{
+=======
+          await axios.get("https://zidio-backend-flame.vercel.app/profile").then((res)=>{
+>>>>>>> 89d3c30a10c05db96ad83d52bd6b469efcab0cec
           console.log(res);
           setusername(res.data.message);})
           }catch(err){
