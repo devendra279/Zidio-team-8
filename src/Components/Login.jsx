@@ -23,7 +23,7 @@ function Login() {
   const submit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("https://zidio-backend-flame.vercel.app/Login", {
+      const response = await axios.post("https://zidio-backend-flame.vercel.app/login", {
         email: email,
         password: password,
       });
