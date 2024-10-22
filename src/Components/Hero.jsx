@@ -1,6 +1,6 @@
 import rocket from '../assets/rocket.png';
 import model from '../assets/model.png';
-
+import { Link } from "react-router-dom";
 const HeroPoster = () => {
   return (
     <div className="bg-[url('./assets/heroBg.jpg')] bg-cover min-h-[80vh] pt-[100px] relative"> {/* Adjusted the height and padding */}
@@ -18,12 +18,17 @@ const HeroPoster = () => {
             Leading Business Evolution with Tailored and Innovative Software Solutions for Sustainable Growth
           </p>
           <div>
-            <button className="cursor-pointer text-white mr-2 px-4 py-3 rounded outline outline-2 outline-btColor bg-btColor hover:bg-white hover:text-black">
+           <Link to="/contact" className="hover:underline"> <button className="cursor-pointer text-white mr-2 px-4 py-3 rounded outline outline-2 outline-btColor bg-btColor hover:bg-white hover:text-black">
               Lets Talk &rarr;
             </button>
+            </Link>
+ 
+
+            <Link to="/about" className="hover:underline">
             <button className="cursor-pointer text-white ml-2 px-4 py-3 rounded outline outline-2 outline-btColor bg-btColor hover:bg-white hover:text-black">
               Read More &rarr;
             </button>
+            </Link>
           </div>
         </div>
 

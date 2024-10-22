@@ -7,8 +7,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-100"> <Header/>
       <div className="relative bg-blue-600 text-white py-16 text-center">
-        <h1 className="text-4xl font-bold">Contact Us</h1>
-        <p className="mt-4">Home &gt; Contact Us</p>
+        <br /><h1 className="text-3xl font-bold my-14">Contact Us</h1>
+        <p className="-mt-12">Home &gt; Contact Us</p>
       </div>
       
       <section className="py-16 bg-white">
@@ -51,7 +51,7 @@ const Contact = () => {
             </form>
           </div>
 
-          <div className="w-1/3 p-6 bg-blue-500 text-white rounded-lg shadow-lg ml-6">
+          <div className="w-2/3 p-6 bg-blue-500 text-white rounded-lg shadow-lg ml-6">
           <h2 className="text-xl font-bold mb-4">Don't Forget to Contact Us</h2>
           <div className="mb-4 flex items-center">
             <FaPhoneAlt className="text-2xl mr-4" />

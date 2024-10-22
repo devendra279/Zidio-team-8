@@ -13,6 +13,8 @@ import { Auth } from "./Components/AuthContext";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import Home from "./Components/Home";
+import About from "./Components/about";
+import Teampage from "./Components/Teampage";
 import { ToastContainer } from "react-toastify";
 import Homepage from "./pages/homepage";
 function App() {
@@ -21,10 +23,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-  
-        <div className="bg-[#f9fafb]">
+  <div className="bg-[#f9fafb]">
           <ToastContainer />
         </div>
+        
         <Top />
         <Header />
        {/* <Hero />  */}
@@ -34,6 +36,8 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="Register" element={<Register />}></Route>
           <Route path="login" element={<Login />}></Route>
+          <Route path="Teampage" element={<Teampage />}></Route>
+          <Route path="about" element={<About />}></Route>
           <Route
             path="/home"
             element={user ? <Home /> : <Login />}
