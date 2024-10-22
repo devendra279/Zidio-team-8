@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   FaArrowRight,
   FaFacebook,
@@ -10,6 +10,11 @@ import logo from "../assets/logo.png"; // Assuming you have the logo in this pat
 import "./Footer.css";
 import { Link } from "react-router-dom";
 const Footer = () => {
+  const newsletterInput = useRef();
+  const handleNewsletterSubmit = () => {
+    event.preventDefault();
+    newsletterInput.current.value = "";
+  };
   return (
     <footer className="bg-[#0D1B2A] text-white py-8 px-4">
       <div className="container mx-auto grid md:grid-cols-4 gap-8">
@@ -23,11 +28,10 @@ const Footer = () => {
             advancement.
           </p>
           <Link to="/about" className="hover:underline">
-  <button className="flex items-center text-blue-500 hover:text-blue-700 font-bold">
-    Discover More <FaArrowRight className="ml-2" />
-  </button>
-</Link>
-
+            <button className="flex items-center text-blue-500 hover:text-blue-700 font-bold">
+              Discover More <FaArrowRight className="ml-2" />
+            </button>
+          </Link>
         </div>
 
         {/* Company Links */}
@@ -36,7 +40,9 @@ const Footer = () => {
           <ul>
             <li className="mb-2 flex items-center">
               <FaArrowRight className="mr-2" />
-              <Link to="/about" className="hover:underline">About Us</Link> 
+              <Link to="/about" className="hover:underline">
+                About Us
+              </Link>
             </li>
             <li className="mb-2 flex items-center">
               <FaArrowRight className="mr-2" />
@@ -45,11 +51,16 @@ const Footer = () => {
               </Link>
             </li>
             <li className="mb-2 flex items-center">
-              <FaArrowRight className="mr-2" /> 
-              <Link to="/contact" className="hover:underline">Contact Us</Link>
+              <FaArrowRight className="mr-2" />
+              <Link to="/contact" className="hover:underline">
+                Contact Us
+              </Link>
             </li>
             <li className="mb-2 flex items-center">
-            <FaArrowRight className="mr-2" /> <Link to="/careers" className="hover:underline">Careers</Link>
+              <FaArrowRight className="mr-2" />{" "}
+              <Link to="/careers" className="hover:underline">
+                Careers
+              </Link>
             </li>
           </ul>
         </div>
@@ -58,39 +69,45 @@ const Footer = () => {
         <div>
           <h4 className="font-bold text-lg mb-4">Our Services</h4>
           <ul>
-            <li className="mb-2 flex items-center">
+            <li className="mb-2 flex items-center service-link-items">
               <FaArrowRight className="mr-2" /> IT Solutions
             </li>
-            <li className="mb-2 flex items-center">
+            <li className="mb-2 flex items-center service-link-items">
               <FaArrowRight className="mr-2" /> Cyber Security
             </li>
-            <li className="mb-2 flex items-center">
+            <li className="mb-2 flex items-center service-link-items">
               <FaArrowRight className="mr-2" /> Digital Marketing
             </li>
-            <li className="mb-2 flex items-center">
+            <li className="mb-2 flex items-center service-link-items">
               <FaArrowRight className="mr-2" /> Machine Learning
             </li>
-            <li className="mb-2 flex items-center">
+            <li className="mb-2 flex items-center service-link-items">
               <FaArrowRight className="mr-2" /> Cloud Services
             </li>
           </ul>
         </div>
 
         {/* Newsletter Subscription */}
-        <div>
-          <h4 className="font-bold text-lg mb-4">Newsletter</h4>
-          <p className="mb-4">Subscribe to Latest Newsletter</p>
-          <div className="flex items-center mb-4">
-            <input
-              type="email"
-              placeholder="Enter Your E-Mail"
-              className="p-2 bg-gray-800 border border-gray-600 rounded text-white w-full"
-            />
+        <form action="">
+          <div>
+            <h4 className="font-bold text-lg mb-4">Newsletter</h4>
+            <p className="mb-4">Subscribe to Latest Newsletter</p>
+            <div className="flex items-center mb-4">
+              <input
+                ref={newsletterInput}
+                type="email"
+                placeholder="Enter Your E-Mail"
+                className="p-2 bg-gray-800 border border-gray-600 rounded text-white w-full"
+              />
+            </div>
+            <button
+              onClick={handleNewsletterSubmit}
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Subscribe
+            </button>
           </div>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
-            Subscribe
-          </button>
-        </div>
+        </form>
       </div>
 
       {/* Footer Bottom */}

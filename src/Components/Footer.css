@@ -41,4 +41,7 @@
     color : #A69EA5;
     font-size: 1.1rem;
 } */
- 
+.service-link-items:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
