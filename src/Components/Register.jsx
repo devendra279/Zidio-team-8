@@ -26,11 +26,7 @@ function Register() {
       }
 
       await axios
-<<<<<<< HEAD
-        .post("https://zidio-backend-dgyt8e87i-devendra279s-projects.vercel.app/register", {
-=======
         .post("https://zidio-backend-flame.vercel.app/register", {
->>>>>>> 89d3c30a10c05db96ad83d52bd6b469efcab0cec
           firstname: firstname,
           lastname: lastname,
           email: email,
