@@ -29,7 +29,7 @@ const HeroPoster = () => {
 
         {/* Right Side Image */}
         <div className="relative flex-1 flex justify-end">
-          <img src={rocket} alt="Rocket" className="absolute top-1/4 right-16 animate-[spin_20s_linear_infinite]" />
+          <img src={rocket} alt="Rocket" className="absolute top-2/4 right-2/3 animate-[spin_20s_linear_infinite]" />
           <img className="max-h-[80%]" src={model} alt="Model" /> {/* Reduced height for better alignment */}
         </div>
       </div>
