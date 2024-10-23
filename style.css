@@ -1,0 +1,122 @@
+.container {
+    text-align: left;
+    width: 80%;
+    padding-left: 200px;
+    background-color:white;
+    color: black;
+    font-size: 20px;
+}
+
+.accordion-item-header {
+    min-height: 2rem;
+    padding-top: 10px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+}
+
+.accordion-item-body{
+    padding: 1rem;
+    line-height: 1.5rem;
+    display: none;
+}
+
+.accordion-item-body.active{
+    display: inline-block;
+}
+
+#para1{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#para2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#para3{
+    font-weight: bold;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+}
+
+#para2:hover{
+    border-bottom: 3px solid rgb(221, 27, 59);
+}
+
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    text-align: left;
+    padding-left: 200px;
+}
+
+.course1{
+    flex: 1;
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+.content a{
+    text-decoration: none;
+}
+
+.content img{
+    height: 300px;
+    width: 300px;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+.course2{
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+.course3{
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+.course4{
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+.course5{
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+#c:hover{
+    background-color: pink;
+}
