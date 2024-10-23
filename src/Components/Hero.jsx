@@ -1,6 +1,8 @@
 import rocket from '../assets/rocket.png';
 import model from '../assets/model.png';
 import { Link } from "react-router-dom";
+import Who from './Who'
+
 const HeroPoster = () => {
   return (
     <div className="bg-[url('./assets/heroBg.jpg')] bg-cover min-h-[80vh] pt-[100px] relative"> {/* Adjusted the height and padding */}
@@ -38,6 +40,7 @@ const HeroPoster = () => {
           <img className="max-h-[80%]" src={model} alt="Model" /> {/* Reduced height for better alignment */}
         </div>
       </div>
+    <Who/>
     </div>
   );
 };
