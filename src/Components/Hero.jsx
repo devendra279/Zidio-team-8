@@ -3,6 +3,9 @@ import model from '../assets/model.png';
 import { Link } from "react-router-dom";
 import Who from './Who'
 import HeroServices from './HeroServices';
+import Reviews from './reviews';
+import Courses from './courses';
+
 const HeroPoster = () => {
   return (
     <div className="bg-[url('./assets/heroBg.jpg')] bg-cover min-h-[80vh] pt-[100px] relative"> {/* Adjusted the height and padding */}
@@ -42,6 +45,8 @@ const HeroPoster = () => {
       </div>
     <Who/>
     <HeroServices/>
+    <Courses />
+    <Reviews />
     </div>
   );
 };
